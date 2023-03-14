@@ -7,10 +7,8 @@ public class ObjectReflection: MonoBehaviour
     public GameObject source; // GameObject sẽ tác dụng lên gameObject này!
 
     private Vector2 midPoint; // = ((created.x + source.x)/2,
-							  //	(created.y + source.y)/2);   
-
+			      //    (created.y + source.y)/2);   
     private float lastValueX; 
-
     private float lastValueY;
 
     private bool isMoving;
@@ -28,7 +26,7 @@ public class ObjectReflection: MonoBehaviour
     }
     [SerializeField] private float originalSpeed = 3f;
 	
-	private void Start()
+    private void Start()
     {
         speed = originalSpeed;
     }
@@ -38,7 +36,7 @@ public class ObjectReflection: MonoBehaviour
         Movement();
     }
 	
-	private void Movement()
+    private void Movement()
     {
         if (isMoving)
         {
@@ -70,7 +68,7 @@ public class ObjectReflection: MonoBehaviour
             isMoving = true;
 
             midPoint.y = source.transform.position.y; // set y value tai vi tri xuat phat (source)
-												   // khi vua collision voi source
+						      // khi vua collision voi source
             lastValueX = source.transform.position.x;
             lastValueY = source.transform.position.y;
         }
@@ -78,7 +76,7 @@ public class ObjectReflection: MonoBehaviour
         if (collision.gameObject.name == "Reflection")
         {
             midPoint.x = this.transform.position.x; // set y value của tại vị trí 
-												 // khi vừa chạm 1 reflector (bức tường, rào chắn,...)
+						    // khi vừa chạm 1 reflector (bức tường, rào chắn,...)
             created.transform.position = 
             new(midPoint.x * 2 - lastValueX, midPoint.y * 2 - lastValueY);
 
