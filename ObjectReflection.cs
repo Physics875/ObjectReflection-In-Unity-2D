@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectReflection: MonoBehaviour
 {
-    public GameObject created; // GameObject sẽ đc tạo ra đối diện với source 
+    public GameObject created; // GameObject sẽ đc tạo ra đối diện với source khi đã hoàn thành mọi phương thức!
 
     public GameObject source; // GameObject sẽ tác dụng lên gameObject này!
 
@@ -73,7 +73,7 @@ public class ObjectReflection: MonoBehaviour
             lastValueY = source.transform.position.y;
         }
 
-        if (collision.gameObject.name == "Reflection")
+        if (collision.gameObject.name == "Reflector") // vật phẳng sẽ làm cho gameObject nảy ra
         {
             midPoint.x = this.transform.position.x; // set y value của tại vị trí 
 						    // khi vừa chạm 1 reflector (bức tường, rào chắn,...)
