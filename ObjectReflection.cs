@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectReflection: MonoBehaviour
 {
-	public GameObject created; // GameObject sẽ đc tạo ra đối diện với source 
+    public GameObject created; // GameObject sẽ đc tạo ra đối diện với source 
 
     public GameObject source; // GameObject sẽ tác dụng lên gameObject này!
 
