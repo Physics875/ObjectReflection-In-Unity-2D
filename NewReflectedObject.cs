@@ -66,14 +66,14 @@ public class NewReflectedObject : MonoBehaviour
     }
     
     /*
-	=Các method tính toán sự phản xạ trong Unity=
+    =Các method tính toán sự phản xạ trong Unity=
 	
-	float Dot(Vector3 lhs, Vector3 rhs)
+    private static float Dot(Vector3 lhs, Vector3 rhs)
     {
         return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
     }
 
-    Vector3 Reflect(Vector3 inDirection, Vector3 inNormal)
+    private static Vector3 Reflect(Vector3 inDirection, Vector3 inNormal)
     {
         float num = -2f * Dot(inNormal, inDirection);
         return new Vector3(num * inNormal.x + inDirection.x, num * inNormal.y + inDirection.y, num * inNormal.z + inDirection.z);
