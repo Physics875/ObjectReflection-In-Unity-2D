@@ -17,7 +17,7 @@ public class NewReflectedObject : MonoBehaviour
     }
     [SerializeField] private float originalSpeed = 4;
 
-    [SerializeField] private Transform direction;
+    [SerializeField] private Transform direction; // hướng chuyển động của GameObject, là con của GameObject này 
 
     //[SerializeField] private Transform inDirection;
     //[SerializeField] private Transform inNormal;
@@ -26,7 +26,7 @@ public class NewReflectedObject : MonoBehaviour
     private void Start()
     {
         speed = originalSpeed;
-        direction = this.transform.GetChild(0); // trả về con đầu tiên của this.transform
+        direction = this.transform.GetChild(0); // trả về con vị trí đầu tiên của transform này
     }
 
     private void Update()
@@ -55,7 +55,7 @@ public class NewReflectedObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Reflector")
+        if (collision.gameObject.name == "Reflector") // bề mặt gây ra lực phản xạ
         {
             isMoving = true;
             //collision.GetContact(0).normal
@@ -65,7 +65,7 @@ public class NewReflectedObject : MonoBehaviour
     }
     
     /*
-	=Các method tính toán sự phản xạ của gameobject trong Unity=
+	=Các method tính toán sự phản xạ trong Unity=
 	
 	float Dot(Vector3 lhs, Vector3 rhs)
     {
