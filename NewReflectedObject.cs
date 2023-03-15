@@ -63,4 +63,19 @@ public class NewReflectedObject : MonoBehaviour
             direction.up = Vector3.Reflect(direction.up.normalized, collision.GetContact(0).normal); 
         }
     }
+    
+    /*
+	=Các method tính toán sự phản xạ của gameobject trong Unity=
+	
+	float Dot(Vector3 lhs, Vector3 rhs)
+    {
+        return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
+    }
+
+    Vector3 Reflect(Vector3 inDirection, Vector3 inNormal)
+    {
+        float num = -2f * Dot(inNormal, inDirection);
+        return new Vector3(num * inNormal.x + inDirection.x, num * inNormal.y + inDirection.y, num * inNormal.z + inDirection.z);
+    }
+	*/
 }
