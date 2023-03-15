@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class NewReflectedObject : MonoBehaviour
 {
-    [SerializeField] private bool isMoving;
+    private bool isMoving;
+    
+    [SerializeField] private Transform direction; // hướng chuyển động của GameObject, là con của GameObject này
+    
     public bool IsMoving
     {
         get { return isMoving; }
@@ -16,8 +19,6 @@ public class NewReflectedObject : MonoBehaviour
         set { speed = value; }
     }
     [SerializeField] private float originalSpeed = 4;
-
-    [SerializeField] private Transform direction; // hướng chuyển động của GameObject, là con của GameObject này 
 
     //[SerializeField] private Transform inDirection;
     //[SerializeField] private Transform inNormal;
